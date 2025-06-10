@@ -1,87 +1,93 @@
 # 🧮 JavaScript Challenge — Day 3: Mini Kalkulator Interaktif
 
-Bagian dari tantangan harian saya: **Code Sprint 30 – 30 Hari JavaScript Konsisten**.  
-Di hari ke-3 ini, saya membangun program kalkulator interaktif sederhana menggunakan JavaScript dasar.
+Bagian dari tantangan harian **Code Sprint 30 – 30 Hari JavaScript Konsisten**.  
+Pada hari ke-3 ini, saya membangun program kalkulator interaktif menggunakan JavaScript dasar yang kemudian saya refactor menjadi versi modular dan lebih dinamis.
 
 ---
 
 ## 🎯 Tujuan Challenge
 
-- Mengambil input dari user (angka dan operator)
-- Melakukan perhitungan matematika sederhana
-- Menangani input tidak valid
-- Memberikan output yang jelas, informatif, dan ramah pengguna
+- Menerima input angka dan operator dari pengguna
+- Melakukan perhitungan matematika dasar
+- Menangani berbagai kasus kesalahan (invalid input, pembagian dengan nol, operator tidak dikenali)
+- Menyajikan hasil perhitungan dengan format yang ramah pengguna dan konsisten
 
 ---
 
 ## 💻 Deskripsi Program
 
 Program ini akan:
-1. Meminta user memasukkan **angka pertama**
-2. Meminta user memasukkan **angka kedua**
-3. Meminta user memilih **operator**: `+`, `-`, `*`, atau `/`
-4. Melakukan perhitungan dan menampilkan hasilnya
+1. Meminta pengguna memasukkan **angka pertama**
+2. Meminta pengguna memasukkan **angka kedua**
+3. Meminta pengguna memilih **operator**: `+`, `-`, `*`, atau `/`
+4. Melakukan perhitungan sesuai operator dan menampilkan hasilnya
+5. Memberikan opsi untuk melakukan perhitungan ulang
 
 ---
 
 ## 🧠 Fitur yang Diterapkan
 
-- Input diambil dari `prompt()` (mode browser)
-- Konversi string ke angka dengan `parseFloat()`
-- Validasi input angka menggunakan `isNaN()`
-- Penggunaan `switch-case` untuk menangani berbagai operator
-- Format output menggunakan template literal dan emoji
-- Penanganan error jika operator tidak dikenali
-- Cek tipe data hasil agar bisa ditangani berbeda jika error (`typeof hasil === "string"`)
+- Input menggunakan `prompt()` (mode browser)
+- Konversi input dari string ke angka dengan `parseFloat()`
+- Validasi angka dengan `isNaN()`
+- Struktur logika menggunakan `switch-case`
+- Refactor ke dalam fungsi `hitung(num1, num2, operator)` dengan nilai `return`
+- Penanganan pembagian dengan nol
+- Output terstruktur dengan template literal dan emoji
+- Pengulangan proses dengan konfirmasi (`confirm()` + `while` loop)
 
 ---
 
 ## 🧪 Contoh Output
 
 <pre><code>
-Masukan angka ke 1: 5
-Masukan angka ke 2: 3
-Masukan operator: *
+Masukan angka ke 1: 10  
+Masukan angka ke 2: 0  
+Masukan operator: /  
+⚠️ Error: bagi 0
+
 📊 Hasil dari 5 * 3 adalah 15
 </code></pre>
 
-Jika user input simbol gak valid:
+Jika operator tidak valid:
 <pre><code>
-Operator tidak dikenali. Silakan gunakan +, -, *, atau /
+❌ Operator tidak dikenali. Silakan gunakan +, -, *, atau /
 </code></pre>
 
 ---
 
-## 💡 Insight & Evaluasi Pribadi
+## 🔍 Insight & Refleksi
 
-Awalnya saya sempat bingung dan banyak coba-coba. Saya salah ketik `prompt()` jadi `promt()`, dan sempat salah pakai `switch` sebelum mengubah input string menjadi angka. Tapi dari semua error itu, saya jadi:
+Di awal, saya mengalami banyak kebingungan mulai dari typo (`promt()`), penggunaan `switch` tanpa parsing angka, hingga error karena `function` tidak dipanggil. Namun dari semua kesalahan tersebut, saya berhasil memahami beberapa konsep penting:
 
-- Paham pentingnya `parseFloat()` untuk angka desimal
-- Belajar deklarasi `let hasil;` lebih dulu sebelum digunakan
-- Tahu bedanya `parseInt()` vs `parseFloat()`
-- Mengerti pentingnya validasi `isNaN()`
-- Menerapkan `switch-case` dengan kondisi yang rapi dan modular
-- Menyadari pentingnya mengecek tipe data saat handling hasil perhitungan
+- Perbedaan antara `parseInt()` dan `parseFloat()` serta kapan menggunakannya
+- Pentingnya mendeklarasikan variabel sebelum digunakan (`let hasil;`)
+- Fungsi `typeof` sebagai cara mendeteksi error berbasis tipe data
+- Konsep `function hoisting` dalam JavaScript
+- Manfaat dari modularisasi kode agar lebih bersih, reusable, dan mudah dikembangkan
+- Pola logika `while + confirm()` sebagai cara membuat aplikasi yang interaktif
 
-> 💬 Saya belum sepenuhnya puas dengan versi sekarang dan berencana untuk membuat versi **lebih modular dan interaktif** di revisi mendatang.
+Challenge ini menjadi latihan yang sangat bermakna untuk memahami **alur pemrosesan input, logika pengambilan keputusan, dan struktur program yang rapi**.
 
 ---
 
-## 🛠 Next Improvement (Planned)
+## 🔧 Fitur Tambahan
 
-- Menambahkan penanganan pembagian dengan nol (`/0`)
-- Membuat versi berbasis fungsi `hitung(num1, num2, operator)`
-- Menambahkan opsi “hitung lagi?”
-- Menyimpan riwayat perhitungan (optional)
+- Validasi angka dan operator
+- Modularisasi logika kalkulasi ke dalam fungsi
+- Pengulangan perhitungan tanpa reload
+- Penanganan error pembagian nol
+- Refactor agar lebih readable dan maintainable
 
 ---
 
 ## 📌 Author
 
-Made with focus, frustration, and fun by **Syifa Fauziyah Arizal**  
+Made with intention, iteration, and improvement by  
+**Syifa Fauziyah Arizal**  
 [GitHub](https://github.com/syfaarizal) • [Portfolio](https://syfaarizal.github.io/sicoder-portfolio/)
 
 ---
 
-> **Challenge ini adalah batu loncatan menuju pemahaman logika program yang lebih dalam.**  
+> Challenge ini membuka wawasan saya bahwa *satu fitur sederhana bisa menjadi ladang eksplorasi mendalam tentang cara berpikir sebagai seorang developer.*  
 > Siap lanjut ke [Day 4: Tebak Angka Game](#)? 🎯
