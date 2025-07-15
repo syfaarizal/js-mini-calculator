@@ -85,9 +85,9 @@ Challenge ini menjadi latihan yang sangat bermakna untuk memahami **alur pemrose
 
 Made with intention, iteration, and improvement by  
 **Syifa Fauziyah Arizal**  
-[GitHub](https://github.com/syfaarizal) • [Portfolio](https://syfaarizal.github.io/sicoder-portfolio/)
+[GitHub](https://github.com/syfaarizal) • [Portfolio](https://syfaarizal.github.io/sicoder-main-portfolio/)
 
 ---
 
 > Challenge ini membuka wawasan saya bahwa *satu fitur sederhana bisa menjadi ladang eksplorasi mendalam tentang cara berpikir sebagai seorang developer.*  
-> Siap lanjut ke [Day 4: Tebak Angka Game](#)? 🎯
+> Siap lanjut ke [Day 4: Tebak Angka Game](https://github.com/syfaarizal/js-number-guessing-game)? 🎯
