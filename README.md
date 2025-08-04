@@ -1,83 +1,83 @@
-# 🧮 JavaScript Challenge — Day 3: Mini Kalkulator Interaktif
+# 🧮 JavaScript Challenge — Day 3: Interactive Mini Calculator
 
-Bagian dari tantangan harian **Code Sprint 30 – 30 Hari JavaScript Konsisten**.  
-Pada hari ke-3 ini, saya membangun program kalkulator interaktif menggunakan JavaScript dasar yang kemudian saya refactor menjadi versi modular dan lebih dinamis.
-
----
-
-## 🎯 Tujuan Challenge
-
-- Menerima input angka dan operator dari pengguna
-- Melakukan perhitungan matematika dasar
-- Menangani berbagai kasus kesalahan (invalid input, pembagian dengan nol, operator tidak dikenali)
-- Menyajikan hasil perhitungan dengan format yang ramah pengguna dan konsisten
+Part of the **Code Sprint 30 – 30 Days of Consistent JavaScript** challenge.  
+On day 3, I built an interactive calculator program using basic JavaScript, which I later refactored into a more modular and dynamic version.
 
 ---
 
-## 💻 Deskripsi Program
+## 🎯 Challenge Goals
 
-Program ini akan:
-1. Meminta pengguna memasukkan **angka pertama**
-2. Meminta pengguna memasukkan **angka kedua**
-3. Meminta pengguna memilih **operator**: `+`, `-`, `*`, atau `/`
-4. Melakukan perhitungan sesuai operator dan menampilkan hasilnya
-5. Memberikan opsi untuk melakukan perhitungan ulang
+- Accept number and operator inputs from users
+- Perform basic mathematical calculations
+- Handle various error cases (invalid input, division by zero, unrecognized operator)
+- Present calculation results with consistent and user-friendly formatting
 
 ---
 
-## 🧠 Fitur yang Diterapkan
+## 💻 Program Description
 
-- Input menggunakan `prompt()` (mode browser)
-- Konversi input dari string ke angka dengan `parseFloat()`
-- Validasi angka dengan `isNaN()`
-- Struktur logika menggunakan `switch-case`
-- Refactor ke dalam fungsi `hitung(num1, num2, operator)` dengan nilai `return`
-- Penanganan pembagian dengan nol
-- Output terstruktur dengan template literal dan emoji
-- Pengulangan proses dengan konfirmasi (`confirm()` + `while` loop)
+This program will:
+1. Prompt the user to enter the **first number**
+2. Prompt the user to enter the **second number**
+3. Ask the user to select an **operator**: `+`, `-`, `*`, or `/`
+4. Perform the calculation based on the operator and display the result
+5. Provide an option to perform another calculation
 
 ---
 
-## 🧪 Contoh Output
+## 🧠 Implemented Features
+
+- Input collection using `prompt()` (browser mode)
+- String-to-number conversion with `parseFloat()`
+- Number validation with `isNaN()`
+- Logic structure using `switch-case`
+- Refactored into a `calculate(num1, num2, operator)` function with return value
+- Division by zero handling
+- Structured output with template literals and emojis
+- Process repetition with confirmation (`confirm()` + `while` loop)
+
+---
+
+## 🧪 Sample Output
 
 <pre><code>
-Masukan angka ke 1: 10  
-Masukan angka ke 2: 0  
-Masukan operator: /  
-⚠️ Error: bagi 0
+Enter first number: 10  
+Enter second number: 0  
+Enter operator: /  
+⚠️ Error: Division by zero
 
-📊 Hasil dari 5 * 3 adalah 15
+📊 Result of 5 * 3 is 15
 </code></pre>
 
-Jika operator tidak valid:
+For invalid operators:
 <pre><code>
-❌ Operator tidak dikenali. Silakan gunakan +, -, *, atau /
+❌ Unrecognized operator. Please use +, -, *, or /
 </code></pre>
 
 ---
 
-## 🔍 Insight & Refleksi
+## 🔍 Insights & Reflections
 
-Di awal, saya mengalami banyak kebingungan mulai dari typo (`promt()`), penggunaan `switch` tanpa parsing angka, hingga error karena `function` tidak dipanggil. Namun dari semua kesalahan tersebut, saya berhasil memahami beberapa konsep penting:
+Initially, I encountered many challenges including typos (promt()), using switch without number parsing, and errors from uncalled functions. Through these mistakes, I gained valuable understanding of several key concepts:
 
-- Perbedaan antara `parseInt()` dan `parseFloat()` serta kapan menggunakannya
-- Pentingnya mendeklarasikan variabel sebelum digunakan (`let hasil;`)
-- Fungsi `typeof` sebagai cara mendeteksi error berbasis tipe data
-- Konsep `function hoisting` dalam JavaScript
-- Manfaat dari modularisasi kode agar lebih bersih, reusable, dan mudah dikembangkan
-- Pola logika `while + confirm()` sebagai cara membuat aplikasi yang interaktif
+- Differences between parseInt() and parseFloat() and when to use each
+- Importance of declaring variables before use (let result;)
+- Using typeof for type-based error detection
+- JavaScript's function hoisting concept
+- Benefits of code modularization for cleaner, reusable, and scalable code
+- The while + confirm() pattern for creating interactive applications
 
-Challenge ini menjadi latihan yang sangat bermakna untuk memahami **alur pemrosesan input, logika pengambilan keputusan, dan struktur program yang rapi**.
+This challenge provided meaningful practice in understanding **input processing flow, decision-making logic, and clean program structure**.
 
 ---
 
-## 🔧 Fitur Tambahan
+## 🔧 Additional Features
 
-- Validasi angka dan operator
-- Modularisasi logika kalkulasi ke dalam fungsi
-- Pengulangan perhitungan tanpa reload
-- Penanganan error pembagian nol
-- Refactor agar lebih readable dan maintainable
+- Number and operator validation
+- Calculation logic modularized into functions
+- Repeat calculations without reloading
+- Division by zero error handling
+- Refactored for better readability and maintainability
 
 ---
 
@@ -89,5 +89,5 @@ Made with intention, iteration, and improvement by
 
 ---
 
-> Challenge ini membuka wawasan saya bahwa *satu fitur sederhana bisa menjadi ladang eksplorasi mendalam tentang cara berpikir sebagai seorang developer.*  
-> Siap lanjut ke [Day 4: Tebak Angka Game](https://github.com/syfaarizal/js-number-guessing-game)? 🎯
+> This challenge showed me *a simple feature can become a deep exploration of developer thinking patterns.*  
+> Ready for [Day 4: Number Guessing Game](https://github.com/syfaarizal/js-number-guessing-game)? 🎯

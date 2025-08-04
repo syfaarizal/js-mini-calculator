@@ -1,35 +1,36 @@
-let lanjut = true;
+let continueCalc = true;
 
-while(lanjut) {
-    const angka1 = prompt("Masukan angka ke 1");
-    const angka2 = prompt("Masukan angka ke 2");
-    const operator = prompt("Masukan operator (+, -, *, /)");
+while (continueCalc) {
+    const num1 = prompt("Enter first number");
+    const num2 = prompt("Enter second number");
+    const operator = prompt("Enter operator (+, -, *, /)");
 
-    const num1 = parseFloat(angka1);
-    const num2 = parseFloat(angka2);
+    const number1 = parseFloat(num1);
+    const number2 = parseFloat(num2);
 
-    if (isNaN(num1) || isNaN(num2)) {
-        console.log("❌ Input bukan angka yang valid!")
+    if (isNaN(number1) || isNaN(number2)) {
+        console.log("❌ Input is not a valid number!");
     } else {
 
-        function hitung(num1, num2, operator) {
-            switch(operator){
+        function calculate(num1, num2, operator) {
+            switch (operator) {
                 case "+": return num1 + num2;
                 case "-": return num1 - num2;
                 case "*": return num1 * num2;
-                case "/": return num2 === 0 ? "⚠️ Error: bagi 0" : num1 / num2;
-                default: return "❌ Operator tidak dikenali. Silakan gunakan +, -, *, atau /."
+                case "/": return num2 === 0 ? "⚠️ Error: division by zero" : num1 / num2;
+                default: return "❌ Operator not recognized. Please use +, -, *, or /.";
             }
         }
 
-        const hasil = hitung(num1, num2, operator);
+        const result = calculate(number1, number2, operator);
 
-        if (typeof hasil === "string") {
-            console.log(hasil); 
+        if (typeof result === "string") {
+            console.log(result);
         } else {
-            console.log(`📊 Hasil dari ${angka1} ${operator} ${angka2} adalah ${hasil}`);
+            console.log(`📊 The result of ${num1} ${operator} ${num2} is ${result}`);
         }
     }
 
-    lanjut = confirm("Ingin menghitung lagi?")
+    continueCalc = confirm("Want to calculate again?");
 }
+          
